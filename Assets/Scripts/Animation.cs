@@ -5,18 +5,25 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
-    Animator m_Animator;
-    public Rigidbody2D rb;
 
+    public LayerMask groundLayer;
+    public Vector2 checkBoxSize = new Vector2(0.5f, 0.2f);
+
+    private Animator _animator;
+    public bool isGrounded;
+    public Transform groundCheck;
+    
+    
     private void Start()
     {
-        m_Animator = gameObject.GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        m_Animator.SetFloat("Speed", Input.GetAxisRaw("Horizontal"));
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, checkBoxSize, 0f, groundLayer);
+        _animator.SetBool("isJumping", !isGrounded);
+
+        _animator.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
     }
 }
