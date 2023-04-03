@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8923001235220176833}
   - component: {fileID: 8033504429922667099}
   m_Layer: 0
-  m_Name: Werld
+  m_Name: Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

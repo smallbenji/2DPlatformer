@@ -1,11 +1,17 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
-
+    
+    /*
+        Ayo you're reading this, nice you're now learning to discover code.
+        
+        This is the Animation script 😊
+    */
+    
     public LayerMask groundLayer;
     public Vector2 checkBoxSize = new Vector2(0.5f, 0.2f);
 

@@ -11,7 +11,6 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
     public Vector2 checkBoxSize = new Vector2(0.5f, 0.2f);
 
-    private bool facingRight;
     private float moveInput;
     private Rigidbody2D rb;
     private bool isGrounded;
